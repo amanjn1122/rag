@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { useSearchParams } from 'next/navigation';
+// import { useSearchParams } from 'next/navigation';
 
 const Dashboard = () => {
   const router = useRouter();
   const [user, setUser] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 
-  const jwt_token = useSearchParams().get('jwt_token')
-  console.log("jwt --->>>",jwt_token);
+  // const jwt_token = useSearchParams().get('jwt_token')
+  // console.log("jwt --->>>",jwt_token);
   // Function to handle sign out
   const handleSignOut = () => {
     // Remove the token from localStorage
@@ -20,7 +20,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const token = localStorage.getItem('jwt_token') ?? jwt_token;
+        const token = localStorage.getItem('jwt_token') ;
 
         if (!token) {
           router.push('/login');  // Redirect to login if token doesn't exist
