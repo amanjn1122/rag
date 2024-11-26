@@ -3,7 +3,7 @@ import { useState } from 'react';
 // import { useRouter } from 'next/router';
 // import Cookies from 'js-cookie';
 
-const HomePage = () => {
+function Home() {
   const [loading, setLoading] = useState(true);
   // const router = useRouter();
 
@@ -30,4 +30,4 @@ const HomePage = () => {
   return <div>Redirecting...</div>;
 };
 
-export default HomePage;
+export default Home;
