@@ -6,9 +6,12 @@ const Login = () => {
 
   useEffect(() => {
     // Check if the user is authenticated
-    const token = localStorage.getItem('jwt_token');
+    if(typeof window !== undefined){
+      const token = localStorage.getItem('jwt_token');
     if (token) {
       router.push('/dashboard');  // Redirect if already logged in
+    }
+    console.log("window not undefined")
     }
   }, [router]);
 
