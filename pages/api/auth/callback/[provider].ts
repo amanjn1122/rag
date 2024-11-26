@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
 import jwt from 'jsonwebtoken';
 //import dbConnect from './lib/dbConnect';
-import User from './models/User';
+// import User from './models/User';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { provider } = req.query;  // 'google' or 'github'
